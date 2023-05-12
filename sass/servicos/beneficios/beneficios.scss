@@ -1,0 +1,47 @@
+@use "../../utils/variables";
+@use "../../utils/mixin";
+
+.beneficios-bg {
+
+  .beneficios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    .beneficios-content {
+      align-self: center;
+
+      h2 {
+        font-size: 3.2rem;
+        line-height: 1.2;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.8rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  @include mixin.responsive("md") {
+    .beneficios {
+      grid-template-columns: 1fr;
+
+      .beneficios-image {
+        justify-self: center;
+      }
+    }
+  }
+
+  @include mixin.responsive('sm') {
+    .beneficios {
+      .beneficios-content {
+        h2 {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+}

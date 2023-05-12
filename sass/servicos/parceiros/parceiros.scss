@@ -26,6 +26,9 @@
   }
   @include mixin.responsive('sm') {
     margin-bottom: 120px;
+    h2 {
+      font-size: 2.4rem;
+    }
     .lojas-parceiras img {
       width: 60px;
     }

@@ -50,5 +50,21 @@
   @include mixin.responsive('xsm') {
     padding: 6px 40px;
   }
-  
+
+}
+
+.btn-larger-secondary {
+  background-color: variables.$gray-900;
+  padding: 8px 60px;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: 'Poppins';
+  text-transform: uppercase;
+  transition: all .3s;
+
+  @include mixin.responsive('xsm') {
+    padding: 6px 40px;
+  }
+
 }

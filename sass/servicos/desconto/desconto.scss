@@ -1,0 +1,121 @@
+@use "../../utils/mixin";
+@use "../../utils/variables";
+
+
+.descontos-bg {
+  margin-bottom: 220px;
+
+  .descontos {
+    h2 {
+      font-size: 4.8rem;
+      line-height: 1.2;
+      font-weight: 500;
+      margin-bottom: 120px;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 120px;
+      gap: 60px;
+
+      img {
+        margin: 0 0 8px;
+      }
+
+      h3 {
+        margin-bottom: 20px;
+        font-size: 2.4rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+        line-height: 1.4;
+      }
+    }
+
+    .descontos-cta {
+      background-color: variables.$green;
+      border-radius: 4px;
+      display: flex;
+      gap: 0;
+
+      .descontos-img img {
+        height: 100%;
+        border-radius: 4px 0 0 4px;
+        object-fit: cover;
+        width: 1080px;
+      }
+
+      .descontos-cta-content {
+        padding: 20px;
+
+        p {
+          font-size: 2.4rem;
+          line-height: 1.4;
+          margin-bottom: 24px;
+        }
+
+        ul {
+          display: grid;
+          margin-bottom: 40px;
+          gap: 20px;
+
+          li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  @include mixin.responsive("md") {
+    .descontos {
+
+      h2 {
+        font-size: 3.2rem;
+        margin-bottom: 60px;
+      }
+
+      ul {
+        flex-direction: column;
+        align-items: start;
+      }
+
+
+      .descontos-cta {
+        flex-direction: column;
+
+        .descontos-img {
+          height: 300px;
+        }
+      }
+    }
+  }
+
+  @include mixin.responsive("sm") {
+    .descontos {
+      h2 {
+        font-size: 2.4rem;
+      }
+
+      ul {
+        h3 {
+          font-size: 2rem;
+        }
+      }
+
+      .descontos-cta {
+        .descontos-cta-content {
+          p {
+            font-size: 1.8rem;
+          }
+        }
+      }
+      
+    }
+  }
+}
