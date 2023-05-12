@@ -1,0 +1,134 @@
+@use "../utils/variables";
+@use "../utils/mixin";
+
+.footer-bg {
+  background-color: variables.$secondary;
+
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    gap: 40px;
+    padding-top: 60px;
+
+    .footer-logo {
+      width: 60px;
+      height: 60px;
+    }
+
+    h3 {
+      font-size: 2.4rem;
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 1.6rem;
+
+      a:hover {
+        color: variables.$gray-100;
+      }
+    }
+
+    .footer-funcionamento {
+      li.aberto::after {
+        content: "";
+        display: inline-block;
+        margin-left: 8px;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #000;
+        background-color: variables.$green;
+        border-radius: 50%;
+      }
+
+      li.fechado::after {
+        content: "";
+        display: inline-block;
+        margin-left: 8px;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #000;
+        background-color: variables.$red;
+        border-radius: 50%;
+      }
+    }
+
+    .footer-redes-image {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      gap: 32px;
+    }
+  }
+
+
+  .separator {
+    width: 100%;
+    height: 2px;
+    background-color: variables.$gray-300;
+    margin: 60px auto;
+  }
+
+
+  .footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 60px;
+
+
+    .footer-info-copy {
+      span {
+        font-size: 2.4rem;
+        font-weight: 500;
+        display: inline-block;
+        margin-bottom: 16px;
+      }
+
+      p {
+        max-width: 400px;
+        font-size: 1.4rem;
+      }
+    }
+
+    .footer-info-dev {
+      a {
+        color: variables.$blue-light;
+        text-decoration: underline;
+
+        &:hover {
+          color: variables.$blue;
+        }
+      }
+    }
+  }
+
+
+  @include mixin.responsive('md') {
+    .footer {
+      grid-template-columns: 1fr 1fr 1fr;
+      h3 {
+        font-size: 2rem;
+      }
+    }
+
+    .separator {
+      width: 95%;
+    }
+  }
+
+  @include mixin.responsive('sm') {
+    .footer {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-info {
+      flex-direction: column;
+      gap: 40px;
+      align-items: self-start;
+    }
+  }
+}

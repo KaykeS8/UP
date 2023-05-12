@@ -1,0 +1,14 @@
+@use "global/reset";
+@use "utils/mixin";
+@use "utils/variables";
+@use "utils/components";
+@use "global/header.scss";
+@use "global/footer.scss";
+
+// PAGE HOME
+@use "home/home.scss";
+@use "servicos/servicos.scss";
+@use "sobre/sobre.scss";
+@use "contato/contato.scss";
+@use "cotacao/cotacao.scss";
+@use "login/login.scss";

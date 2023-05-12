@@ -1,0 +1,74 @@
+@use "../../utils/variables";
+@use "../../utils/mixin";
+
+
+.feedback {
+  margin-bottom: 220px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: variables.$primary;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .feedback-content {
+    padding: 40px 40px 40px 80px;
+    align-self: center;
+    font-size: 3.6rem;
+
+    p {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      max-width: 40ch;
+      margin-bottom: 32px;
+
+      &::after {
+        content: "  ” ";
+      }
+
+      &::before {
+        content: " “ ";
+      }
+
+      &::after,
+      &::before {
+        font-size: 4rem;
+        color: variables.$primary-light;
+      }
+    }
+
+    span {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: variables.$primary-dark;
+    }
+  }
+
+  @include mixin.responsive("md") {
+    grid-template-columns: 1fr;
+    text-align: center;
+
+    img {
+      max-height: 260px;
+      object-position: right;
+    }
+  }
+
+  @include mixin.responsive("sm") {
+    margin-bottom: 120px;
+    .feedback-content {
+      padding: 20px;
+      font-size: 2.4rem;
+    }
+  }
+
+  @include mixin.responsive('xsm') {
+    .feedback-content {
+      font-size: 2rem;
+    }
+  }
+}

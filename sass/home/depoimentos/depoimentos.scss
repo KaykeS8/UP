@@ -1,0 +1,81 @@
+@use "../../utils/variables";
+@use "../../utils/mixin";
+
+.depoimentos-bg {
+  margin-bottom: 220px;
+
+  .depoimentos {
+    h3 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 4.8rem;
+      font-weight: 500;
+      margin-bottom: 80px;
+    }
+  }
+
+  .depoimentos-box {
+    .depoimentos-photo img {
+      border-radius: 50%;
+      margin-bottom: 12px;
+      width: 54px;
+      height: 54px;
+    }
+
+    h4 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 1.5;
+    }
+  }
+
+
+  .splide {
+    padding: 20px;
+    cursor: grab;
+
+    .splide__list {
+      display: flex;
+      gap: 20px;
+    }
+
+    .splide__slide {
+      max-width: 420px;
+      padding: 24px;
+      background-color: variables.$secondary;
+
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+    }
+
+  }
+
+
+  @include mixin.responsive("md") {
+    .depoimentos h2 {
+      font-size: 3.2rem;
+      margin-bottom: 60px;
+    }
+  }
+
+  @include mixin.responsive('sm') {
+    margin-bottom: 120px;
+    .depoimentos {
+      h2 {
+        font-size: 2.4rem;
+      }
+    }
+  }
+}

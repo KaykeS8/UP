@@ -1,0 +1,110 @@
+@use "../../utils/variables";
+@use '../../utils/mixin';
+
+.planos-bg {
+  margin-bottom: 220px;
+
+  h2 {
+    font-size: 4.8rem;
+    line-height: 1.2;
+    font-weight: 500;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+  }
+
+  p {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin:  0 auto 120px;
+    padding: 0 20px;
+
+    &::after {
+      content: "";
+      margin-top: 20px;
+      display: block;
+      width: 2px;
+      height: 90px;
+      background-image: variables.$gradient-primary;
+    }
+  }
+
+  .planos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    span {
+      display: block;
+      font-weight: 500;
+      font-size: 3.2rem;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 3.6rem;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    a {
+      margin-left: 20px;
+    }
+
+    .planos-basico {
+      background-color: variables.$gray-200;
+      padding: 20px;
+      border-radius: 4px;
+      align-self: center;
+    }
+
+    .planos-ouro {
+      background-color: variables.$secondary;
+      padding: 20px;
+      border-radius: 4px;
+    }
+
+    .planos-lista {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding-left: 20px;
+      margin-bottom: 40px;
+
+      .planos-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 11.15px;
+          height: 7.99px;
+          background-image: url("../../../assets/svg/lista.svg");
+        }
+      }
+    }
+  }
+
+
+@include mixin.responsive("md") {
+  h2 {
+    font-size: 3.2rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+  .planos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@include mixin.responsive('sm') {
+  margin-bottom: 120px;
+  h2 {
+    font-size: 2.4rem;
+  }
+}
+}

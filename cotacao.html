@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="UP Clube de Benefícios - Associação de Proteção Veicular em Minas Gerais. Conte com a proteção da UP para garantir a segurança e tranquilidade ao dirigir. Com mais de 7 anos de experiência, temos a solução ideal para quem deseja proteger o seu veículo e seus direitos como motorista. Junte-se a milhares de associados satisfeitos e tenha a tranquilidade que você merece. Solicite já uma cotação!">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://resources.powercrm.com.br/assets/external/css/style.pwrcrm.css" />
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+  <title>UP clube de benefícios - cotação</title>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header-bg" style="margin: 0;">
+    <div class="header container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="logo" width="60" height="60">
+      </a>
+
+      <nav class="header-nav" aria-label="primaria">
+        <button aria-label="Abrir menu" id="btn-mobile" aria-controls="menu" aria-haspopup="true"
+          aria-expanded="false">Menu
+          <span id="hamburguer"></span>
+        </button>
+        <ul role="menu" id="menu" class="gray-700 list-nav">
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="login.html" class="link-mobile">Login</a></li>
+          <li><a href="cotacao.html" class="link-mobile">Cotação</a></li>
+        </ul>
+        <div class="header-buttons">
+          <a href="cotacao.html" class="btn-small-primary gray-100">cotação</a>
+          <a href="login.html" class="btn-small-secondary gray-900">login</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- COTAÇÃO -->
+  <div class="cotacao-bg">
+    <div class="container">
+      <div class="introducao-cotacao">
+        <h3 class="title primary-color">cotação</h3>
+        <h2 class="title gray-100">Faça sua cotação online!</h2>
+      </div>
+      <section id="pwrcrm" class="cotacao">
+        <form id="pwrcrmform" class="form-cotacao">
+          <input type="hidden" value="up clube de beneficios64" id="pwrCmpnHsh" name="pwrCmpnHsh">
+          <input type="hidden" value="DwO0VMl3" id="pwrFrmCode" name="pwrFrmCode">
+          <input type="hidden" value="1" id="pwrPplnClmn" name="pwrPplnClmn">
+
+          <div class="cotacao-divider-pessoal">
+            <h3 class="title gray-800">dados pessoais</h3>
+            <div class="pwrcrmInputCont">
+              <label for="pwrClntNm">Nome<strong>*</strong></label>
+              <input type="text" required="required" id="pwrClntNm" name="pwrClntNm">
+            </div>
+            <div class="pwrcrmInputCont">
+              <label for="pwrCltPhn">Telefone<strong>*</strong></label>
+              <input type="tel" required="required" placeholder="(__) _____-____" maxlength="11" class="phone_mask"
+                id="pwrCltPhn" name="pwrCltPhn">
+            </div>
+            <div class="pwrcrmInputCont">
+              <label for="pwrClntMl">E-mail<strong>*</strong></label>
+              <input type="email" required="required" id="pwrClntMl" name="pwrClntMl">
+            </div>
+            <div class="pwrcrmInputCont">
+              <label for="pwrStt">Estado<strong>*</strong></label>
+              <select required="required" id="pwrStt" name="pwrStt">
+                <option value="0">Selecione o estado</option>
+              </select>
+            </div>
+            <div class="pwrcrmInputCont">
+              <label for="pwrCt">Cidade<strong>*</strong></label>
+              <select required="required" id="pwrCt" name="pwrCt">
+                <option value="0">Selecione a cidade</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="cotacao-divider-veiculo">
+            <h3 class="title gray-800">Informações do veículo</h3>
+            <div class="pwrcrmInputCont">
+              <label for="pwrVhclPlt">Placa</label>
+              <input type="text" placeholder="XXX0000" maxlength="7" id="pwrVhclPlt" name="pwrVhclPlt">
+            </div>
+            <div class="pwrcrmInputCont">
+              <label for="pwrVhclTyp">Tipo do veículo<strong>*</strong></label>
+              <select required="required" id="pwrVhclTyp" name="pwrVhclTyp">
+                <option value="0">Selecione o tipo</option>
+                <option value="1">Carro ou utilitário pequeno</option>
+                <option value="2">Moto</option>
+                <option value="3">Caminhão ou micro-ônibus</option>
+              </select>
+            </div>
+            <div class="pwrcrmInputCont">
+              <label for="pwrVhclBrnch">Marca do veículo<strong>*</strong></label>
+              <select required="required" id="pwrVhclBrnch" name="pwrVhclBrnch">
+                <option value="0">Selecione a marca</option>
+              </select>
+            </div>
+            <div class="pwrcrmInputCont">
+              <label for="pwrVhclYr">Ano do modelo<strong>*</strong></label>
+              <select required="required" id="pwrVhclYr" name="pwrVhclYr">
+                <option value="0">Selecione o ano do modelo</option>
+              </select>
+            </div>
+            <div class="pwrcrmInputCont">
+              <label for="pwrVhclMdl">Modelo<strong>*</strong></label>
+              <select required="required" id="pwrVhclMdl" name="pwrVhclMdl">
+                <option value="0">Selecione o modelo</option>
+              </select>
+            </div>
+
+            <div class="pwrcrmInputCont">
+              <input type="checkbox" id="pwrVhclSWrk" name="pwrVhclSWrk">
+              <label for="pwrVhclSWrk">Taxi/App (Uber, 99, etc)</label>
+            </div>
+            <div class="pwrcrmInputCont">
+              <label for="pwrObs">Observações</label>
+              <textarea id="pwrObs" name="pwrObs" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn-larger gray-100"> Receber cotação</button>
+          </div>
+
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <!-- Aplicativo -->
+  <article class="aplicativo-bg" style="padding-top: 60px;">
+    <div class="aplicativo container">
+      <div class="aplicativo-content">
+        <h3 class="title primary-color">seja um associado</h3>
+        <h2 class="title gra-800">Baixe o aplicativo. É gratuito</h2>
+        <p class="gray-600">Baixe agora o aplicativo da UP Clube de Benefícios e tenha acesso a todos os nossos serviços
+          na palma da sua mão! Com ele, você pode ver seus benefícios como associado, fazer vistoria e muito mais, Baixe
+          agora!</p>
+        <div class="aplicativo-plataformas">
+          <a href="https://apps.apple.com/br/app/up-clube-de-benef%C3%ADcios/id1625884673" class="applestore"
+            target="_blank">
+            <img src="assets/img/app-store.png" width="176" height="62" alt="logo da apple store">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=br.com.hinovamobile.upclube" class="playstore" target="_blank
+          ">
+            <img src="assets/img/playstore.png" width="176" height="62" alt="logo da playstore">
+          </a>
+        </div>
+      </div>
+      <div class="aplicativo-mockup">
+        <img src="assets/img/woman-orange.png" width="424" height="420"  alt="foto do aplicativo">
+      </div>
+    </div>
+  </article>
+
+
+  <!-- FOOTER -->
+  <footer class="footer-bg">
+    <div class="footer container">
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="assets/logo.png" width="60" height="60" alt="logo up clube de beneficios">
+        </a>
+      </div>
+      <div class="footer-informacoes">
+        <h3 class="title gray-200">Informações</h3>
+        <ul class="footer-informacoes-list gray-300">
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="cotacao.html">Cotação</a></li>
+        </ul>
+      </div>
+      <div class="footer-funcionamento">
+        <h3 class="title gray-200">Funcionamento</h3>
+        <ul class="footer-funcionamento-list gray-300">
+          <li data-semana="1,2,3,4" data-horario="8,18">seg à qui das 8 às 18</li>
+          <li data-semana="1,2,3,4,5" data-horario="8,17">seg à sex das 8 às 17</li>
+        </ul>
+      </div>
+      <div class="footer-redes">
+        <h3 class="title gray-200">Redes Sociais</h3>
+        <div class="footer-redes-image">
+          <a href="https://www.instagram.com/upclubedebeneficios/" target="_blank">
+            <img src="assets/svg/instagram.svg" width="26" height="26" alt="logo do instagram">
+          </a>
+          <a href="https://www.facebook.com/UpClubeDeBeneficios/?locale=pt_BR" target="_blank">
+            <img src="assets/svg/facebook.svg" width="24" height="24" alt="logo do facebook">
+          </a>
+          <a href="https://wa.me/30468900" target="_blank">
+            <img src="assets/svg/whatsapp.svg" width="24" height="25" alt="logo do whatsapp">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="separator container">
+    </div>
+
+    <div class="footer-info container">
+      <div class="footer-info-copy">
+        <span class="gray-100">&copy; 2023 Up clube de benefícios</span>
+        <p class="gray-300">A up clube de benefícios é uma empresa de associação automotiva, que atua pelo príncipio da
+          livre filiação, onde todos são iguais em direitos e deveres.</p>
+      </div>
+      <div class="footer-info-dev gray-100">
+        Desenvolvido por: <a href="https://br.linkedin.com/in/kayke-simao-592316226?trk=public_post_feed-actor-image"
+          target="_blank">Kayke simao</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://resources.powercrm.com.br/assets/external/js/script.pwrcrm.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

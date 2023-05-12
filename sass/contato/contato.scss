@@ -1,0 +1,162 @@
+@use "../utils/variables";
+@use "../utils/mixin";
+
+
+.contato-bg {
+  margin-bottom: 220px;
+
+  h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 4.8rem;
+    font-weight: 500;
+    margin-bottom: 60px;
+  }
+
+  .contato {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+
+    .contato-info {
+      background-color: variables.$secondary;
+      padding: 40px;
+      border-radius: 4px 0 0 4px;
+
+      h4 {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+        font-weight: 600;
+        letter-spacing: 1.5%;
+      }
+
+      .contato-endereco {
+        display: flex;
+        flex-direction: column;
+        background-image: url("../../assets/svg/local-1.svg");
+        background-repeat: no-repeat;
+        padding-left: 24px;
+        gap: 12px;
+        margin-bottom: 32px;
+      }
+
+      .contato-meios {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 60px;
+
+        a[ href="mailto:comercial@upclubedebeneficios.com.br"] {
+          background-image: url("../../assets/svg/email.svg");
+          background-repeat: no-repeat;
+          padding-left: 24px;
+
+          &:hover {
+            color: variables.$gray-100;
+          }
+        }
+
+        a[href="tel:+55 31 94112-2191"] {
+          background-image: url("../../assets/svg/telefone.svg");
+          background-repeat: no-repeat;
+          padding-left: 24px;
+
+          &:hover {
+            color: variables.$gray-100;
+          }
+        }
+      }
+
+      .contato-redes {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+    }
+  }
+
+  .contato-map {
+    background-color: variables.$gray-200;
+    padding: 40px 100px;
+    border-radius:  0 4px 4px 0;
+
+    .container-iframe {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 30px;
+      height: 0;
+      overflow: hidden;
+      margin-bottom: 36px;
+
+      .iframe-responsive {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .contato-localizacao {
+      h3 {
+        font-size: 3.2rem;
+        margin-bottom: 24px;
+      }
+
+      .contato-localizacao-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  @media (max-width:960px) {
+    .contato {
+      grid-template-columns: 1fr;
+
+      .contato-info {
+        border-radius: 4px 4px 0 0;
+      }
+    }
+
+    .contato-map {
+      border-radius: 0 0 4px 4px;
+    }
+  }
+
+  @include mixin.responsive('md') {
+
+    h2 {
+      font-size: 3.2rem;
+    }
+    .contato .contato-info {
+      padding: 20px;
+    }
+
+    .contato-map {
+      padding: 20px;
+
+      .contato-localizacao {
+        .contato-localizacao-list {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+
+  @include mixin.responsive("sm") {
+    h2 {
+      font-size: 2.4rem;
+    }
+
+    .contato {
+      padding: 0;
+    }
+  }
+}

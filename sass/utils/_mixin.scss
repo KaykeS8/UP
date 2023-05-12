@@ -1,0 +1,23 @@
+
+$breakpoints: (
+  "md":(
+    max-width: 800px,
+  ),
+  "sm": (
+    max-width: 600px, 
+  ),
+  "xsm": (
+    max-width: 460px,
+  ),
+);
+
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints,$breakpoint ) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+    + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

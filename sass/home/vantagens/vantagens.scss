@@ -1,0 +1,85 @@
+@use "../../utils/variables";
+@use "../../utils/mixin";
+
+.vantagens-bg {
+  background-color: variables.$secondary;
+  margin-bottom: 220px;
+  padding: 60px 0 120px;
+  position: relative;
+
+  .vantagens {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .vantagens-content {
+      h3 {
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1.5%;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 2.4rem;
+        line-height: 1.5;
+        margin-bottom: 32px;
+      }
+
+      ul {
+        display: grid;
+        gap: 20px;
+        margin-bottom: 60px;
+
+        li {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+        }
+      }
+
+    }
+
+    .vantagens-image img {
+      position: absolute;
+      width: 60%;
+      top: 60px;
+      right: 20px;
+    }
+  }
+
+  @media (max-width:1000px) {
+    .vantagens {
+      grid-template-columns: 1fr;
+    }
+
+    .vantagens-content {
+      ul {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    .vantagens-image img {
+      display: none;
+    }
+  }
+
+  @include mixin.responsive("md") {
+    h3 {
+      font-size: 2rem;
+    }
+
+    .vantagens .vantagens-content p {
+      font-size: 1.8rem;
+    }
+
+    .vantagens-content ul {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @include mixin.responsive("sm") {
+    margin-bottom: 120px;
+    .vantagens-content ul {
+      grid-template-columns: 1fr;
+    }
+  }
+}

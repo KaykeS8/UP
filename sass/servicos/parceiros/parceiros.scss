@@ -1,0 +1,33 @@
+@use "../../utils/mixin";
+
+.lojas-parceiras-bg {
+  margin-bottom: 220px;
+  h2 {
+    font-size: 3.2rem;
+    text-align: center; 
+    font-weight: 500;
+    margin-bottom: 60px;
+  }
+
+  .lojas-parceiras {
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 20px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+  }
+
+  @include mixin.responsive('md') {
+    .lojas-parceiras img {
+      width: 120px;
+    }
+  }
+  @include mixin.responsive('sm') {
+    margin-bottom: 120px;
+    .lojas-parceiras img {
+      width: 60px;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+@use "../../utils/variables";
+@use "../../utils/mixin";
+
+.sobre-bg {
+  margin-bottom: 220px;
+  
+  .sobre-metricas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 160px;
+
+    .sobre-metricas-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      span {
+        font-size: 4.8rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      p {
+        font-size: 2.4rem;
+        text-align: center;
+      }
+    }
+  }
+
+  p.sobre-texto {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    margin-bottom: 160px;
+  }
+
+  .sobre-valores {
+    h2 {
+      font-size: 4.8rem;
+      font-weight: 400;
+      margin-bottom: 60px;
+    }
+
+    .sobre-valores-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .sobre-valores-item {
+      img {
+        margin-bottom: 12px;
+      }
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 1.8rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  @media (max-width:1030px) {
+    .sobre-valores {
+      .sobre-valores-container {
+        grid-template-columns: 1fr;
+
+        p {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  @include mixin.responsive('md') {
+    .sobre-metricas {
+      margin-bottom: 120px;
+      .sobre-metricas-item {
+        span {
+          font-size: 4.8rem;
+        }
+
+        p {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .sobre-valores {
+      h2 {
+        font-size: 3.2rem;
+      }
+      .sobre-valores-container {
+        grid-template-columns: 1fr;
+
+        .sobre-valores-item {
+          p {
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  @include mixin.responsive('sm') {
+    margin-bottom: 120px;
+
+    p.sobre-texto {
+      font-size: 1.8rem;
+    }
+    .sobre-metricas {
+      flex-direction: column;
+      gap: 40px;
+      .sobre-metricas-item {
+        p {
+          font-size: 1.6rem;
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    .sobre-valores {
+      h2 {
+        font-size: 2.4rem;
+        font-weight: 500;
+      }
+      .sobre-valores-container {
+        .sobre-valores-item {
+          p {
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Serviços veiculares e seguros tudo você encontra aqui. Página de seguros da up clube de benefícios">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="shortcut icon" href="./assets/favicon.ico">
+  <link rel="stylesheet" href="style/style.css">
+  <title>UP clube de benefícios - Serviços</title>
+</head>
+
+
+<style>
+  .modal-bg.active {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    height: 600vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+  }
+
+  .modal.active {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 100px;
+    display: block;
+    border-radius: 4px;
+  }
+
+  .modal {
+    display: none;
+  }
+
+  .modal header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  .modal p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 32px;
+  }
+
+  .modal li {
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  a[href="#"] {
+    color: #fff;
+    text-decoration: underline;
+    margin-top: 20px;
+  }
+
+  .close {
+    cursor: pointer;
+  }
+</style>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header-bg" style="margin:0;">
+    <div class="header container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="logo" width="60" height="60">
+      </a>
+
+      <nav class="header-nav" aria-label="primaria">
+        <button aria-label="Abrir menu" id="btn-mobile" aria-controls="menu" aria-haspopup="true"
+          aria-expanded="false">Menu
+          <span id="hamburguer"></span>
+        </button>
+        <ul role="menu" id="menu" class="gray-700 list-nav">
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="login.html" class="link-mobile">Login</a></li>
+          <li><a href="cotacao.html" class="link-mobile">Cotação</a></li>
+        </ul>
+        <div class="header-buttons">
+          <a href="cotacao.html" class="btn-small-primary gray-100">cotação</a>
+          <a href="login.html" class="btn-small-secondary gray-900">login</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- INTRODUÇÃO -->
+  <main class="servicos-bg">
+    <div class="servicos container">
+      <div class="servicos-content">
+        <h1 class="gray-100 title">Conheça nossos serviços e garanta a tranquilidade que você merece!</h1>
+        <a href="cotacao.html" class="btn-larger gray-100 pwrcrm_bttn">faça sua cotação</a>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- PARCEIROS -->
+  <section class="lojas-parceiras-bg" aria-label="seçao de descontos em lojas">
+    <h2>Nossos <span class="primary-color">associados</span> possuem descontos em </h2>
+    <div class="lojas-parceiras">
+      <img src="assets/svg/logo-amazon.svg" width="199" height="60" alt="logo da amazon">
+      <img src="assets/svg/puma.svg" width="101" height="62" alt="logo da puma">
+      <img src="assets/svg/magalu.svg" width="180" height="40" alt="logo da magalu">
+      <img src="assets/svg/shopee.svg" width="178" height="57" alt="logo da shopee">
+      <img src="assets/svg/gool.svg" width="113" height="60" alt="logo do gool">
+    </div>
+  </section>
+
+  <!--NEW SECTION  -->
+  <section>
+    <div class="container">
+    </div>
+  </section>
+
+  <!-- SERVIÇOS VEICULARES -->
+  <article class="servicos-veiculares-bg" id="servicos">
+    <h2 class="title gray-800 container">Alguns de nossos serviços veiculares para sua segurança.</h2>
+    <ul class="servicos-veiculares-list">
+      <li>
+        <img src="assets/svg/icon-furto.svg" width="32" height="32" alt="furto">
+        <h3 class="title gray-200">furto/roubo</h3>
+        <p class="gray-300">Seja ressarcido em até 100% do valor de tabela FIPE caso seu veículo seja roubado ou
+          furtado.</p>
+        <a href="#" class="clique-1">Saiba mais</a>
+      </li>
+      <li>
+        <img src="assets/svg/icon-colisao.svg" width="30" height="40" alt="colisão">
+        <h3 class="title gray-200">colisão</h3>
+        <p class="gray-300">Em caso de acidente, nós providenciamos o conserto do seu veículo.</p>
+        <a href="#" class="clique-2">Saiba mais</a>
+      </li>
+      <li>
+        <img src="assets/svg/icon-perda-total.svg" width="43" height="42" alt="perda total">
+        <h3 class="title gray-200">perda total</h3>
+        <p class="gray-300">Se o estrago configurar Perda Total, nós iremos indenizá-lo por este prejuízo.</p>
+        <a href="#" class="clique-3">Saiba mais</a>
+      <li>
+        <img src="assets/svg/icon-protecao.svg" width="46" height="38" alt="proteção para terceiros">
+        <h3 class="title gray-200">proteção para terceiros</h3>
+        <p class="gray-300">Caso você se envolva em um acidente com outro veículo, os consertos são por nossa conta.</p>
+        <a href="#" class="clique-4">Saiba mais</a>
+      </li>
+      <li>
+        <img src="assets/svg/icon-dessastre.svg" width="29" height="30" alt="fenômenos da natureza">
+        <h3 class="title gray-200">fenômenos naturais</h3>
+        <p class="gray-300">Se seu veículo for danificado por alagamentos, quedas de árvores ou chuvas de granizo, nós
+          ressarcimos seu prejuízo.</p>
+        <a href="#" class="clique-5">Saiba mais</a>
+      </li>
+      <li>
+        <img src="assets/svg/icon-24horas.svg" width="45" height="40" alt="assistência 24horas">
+        <h3 class="title gray-200">assistência 24horas</h3>
+        <p class="gray-300">Em todo Brasil você pode contar com: socorro, reboque, chaveiro, troca de pneu furado,
+          auxílio na falta de gasolina, entre outros.</p>
+        <a href="#" class="clique-6">Saiba mais</a>
+      </li>
+    </ul>
+  </article>
+
+
+
+  <!-- PLANOS -->
+
+  <section class="planos-bg" aria-label="seção de planos">
+    <h2 class="title gray-800 center-column">O melhor custo benefício do mercado de proteção veicular</h2>
+    <p class="gray-600 center-column">Abaixo nossos principais planos de proteção para seu veículo. Mas você está livre
+      para personalizar para atender sua necessidade. Temos as opções ideais para cada veículo.</p>
+
+    <div class="planos container">
+      <div class="planos-basico">
+        <span class="title gray-900">UP</span>
+        <h3 class="title gray-600">Basico</h3>
+        <ul class="planos-lista gray-600">
+          <li class="planos-item">Roubo e furto</li>
+          <li class="planos-item">Assistência 24 horas</li>
+          <li class="planos-item">Incendio</li>
+          <li class="planos-item">Granizo</li>
+          <li class="planos-item">Perda total</li>
+          <li class="planos-item">Rastreador</li>
+        </ul>
+        <a href="cotacao.html" class="btn-larger gray-100">faça sua cotação</a>
+      </div>
+      <div class="planos-ouro">
+        <span class="title gray-100">UP</span>
+        <h3 class="title primary-color">Ouro</h3>
+        <ul class="planos-lista gray-100">
+          <li class="planos-item">Roubo e furto</li>
+          <li class="planos-item">Assistência 24 horas</li>
+          <li class="planos-item">Incendio</li>
+          <li class="planos-item">Granizo</li>
+          <li class="planos-item">Perda total</li>
+          <li class="planos-item">Rastreador</li>
+          <li class="planos-item">Danos materiais a terceiros R$ 50.000</li>
+          <li class="planos-item">Proteção para brisa</li>
+          <li class="planos-item">Carro reserva 7 dias</li>
+        </ul>
+        <a href="cotacao.html" class="btn-larger gray-100">faça sua cotação</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERGUNTAS FREQUENTES -->
+  <article class="perguntas-bg">
+    <div class="perguntas container">
+      <h2 class="title gray-800">Perguntas frequentes</h2>
+      <dl>
+        <div>
+          <dt><button class="title gray-800" aria-controls="pergunta1" aria-expanded="true">O que é associação
+              automotiva?</button></dt>
+          <dd id="pergunta1">As Associações de Proteção Veicular são instituições constituídas sob a forma de
+            associação, com o objetivo de promover a proteção dos veículos dos seus associados contra roubos e
+            acidentes, além de prestar outros serviços relacionados, como por exemplo, socorro mecânico.</dd>
+        </div>
+        <div>
+          <dt><button class="title gray-800" aria-controls="pergunta2" aria-expanded="false">O que é clube de
+              benefícios?</button></dt>
+          <dd id="pergunta2">o Clube de Vantagens é um programa de retenção de consumidores que oferece um conjunto de
+            benefícios em troca da fidelização de seus usuários: os clientes de empresas participantes do clube.</dd>
+        </div>
+        <div>
+          <dt><button class="title gray-800" aria-controls="pergunta3" aria-expanded="false">Qual a diferença entre a
+              UP e uma seguradora?</button></dt>
+          <dd id="pergunta3">A up é uma associação de proteção veicular, não deve em momento algum ser confundida com
+            uma seguradora de veículos. Nos seguros automotivos tradicionais, o segurado adere a uma apólice e transfere
+            o risco do veículo para a seguradora, na up, por ser uma associação, a filiação acontece por meio de uma
+            proposta e os riscos são divididos entre os associados por meio do rateio.
+            Na prática, o rateio é a divisão dos prejuízos cobertos pelo programa entre todos os associados. Este
+            sistema é muito mais justo e eficaz uma vez que somente é cobrado por prejuízos já ocorridos e não por
+            riscos futuros que podem ou não acontecer.
+            A up é uma associação e por isso é fiscalizada pelo Ministério Público. Já as seguradoras são regulamentadas
+            pela Susep (Superintendência de Seguros Privados).</dd>
+        </div>
+        <div>
+          <dt><button class="title gray-800" aria-controls="pergunta4" aria-expanded="false">Como faço para solicitar
+              uma cotação na UP?</button></dt>
+          <dd id="pergunta4">Para solicitar uma cotação na UP Clube de Benefícios, basta acessar o site oficial da
+            associação, preencher o formulário com as informações do seu veículo e entrar em contato com a equipe de
+            atendimento da UP.</dd>
+        </div>
+        <div>
+          <dt><button class="title gray-800" aria-controls="pergunta5" aria-expanded="false">A UP oferece assistência 24
+              horas para seus associados?</button></dt>
+          <dd id="pergunta5">Sim, a UP Clube de Benefícios oferece assistência 24 horas para seus associados em todo o
+            estado de Minas Gerais. Isso significa que os associados podem contar com suporte em caso de sinistros,
+            panes, acidentes e outras emergências relacionadas ao veículo.</dd>
+        </div>
+      </dl>
+    </div>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer-bg">
+    <div class="footer container">
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="assets/logo.png" width="60" height="60" alt="logo up clube de beneficios">
+        </a>
+      </div>
+      <div class="footer-informacoes">
+        <h3 class="title gray-200">Informações</h3>
+        <ul class="footer-informacoes-list gray-300">
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="cotacao.html">Cotação</a></li>
+        </ul>
+      </div>
+      <div class="footer-funcionamento">
+        <h3 class="title gray-200">Funcionamento</h3>
+        <ul class="footer-funcionamento-list gray-300">
+          <li data-semana="1,2,3,4" data-horario="8,18">seg à qui das 8 às 18</li>
+          <li data-semana="1,2,3,4,5" data-horario="8,17">seg à sex das 8 às 17</li>
+        </ul>
+      </div>
+      <div class="footer-redes">
+        <h3 class="title gray-200">Redes Sociais</h3>
+        <div class="footer-redes-image">
+          <a href="https://www.instagram.com/upclubedebeneficios/" target="_blank">
+            <img src="assets/svg/instagram.svg" width="26" height="26" alt="logo do instagram">
+          </a>
+          <a href="https://www.facebook.com/UpClubeDeBeneficios/?locale=pt_BR" target="_blank">
+            <img src="assets/svg/facebook.svg" width="24" height="24" alt="logo do facebook">
+          </a>
+          <a href="https://wa.me/30468900" target="_blank">
+            <img src="assets/svg/whatsapp.svg" width="24" height="25" alt="logo do whatsapp">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="separator container">
+    </div>
+
+    <div class="footer-info container">
+      <div class="footer-info-copy">
+        <span class="gray-100">&copy; 2023 Up clube de benefícios</span>
+        <p class="gray-300">A up clube de benefícios é uma empresa de associação automotiva, que atua pelo príncipio da
+          livre filiação, onde todos são iguais em direitos e deveres.</p>
+      </div>
+      <div class="footer-info-dev gray-100">
+        Desenvolvido por: <a href="https://br.linkedin.com/in/kayke-simao-592316226?trk=public_post_feed-actor-image"
+          target="_blank">Kayke simao</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- BLOCK MODAL -->
+  <section class="modal-bg modal-bg-1">
+    <div class="container">
+      <div class="modal modal-1">
+        <header>
+          <h3>Furto/Roubo</h3>
+          <span class="close">
+            <img src="assets/svg/close.svg" alt="">
+          </span>
+        </header>
+        <p>Perder o seu veículo por roubo ou furto pode ser um grande problema, mas com a UP clube de beneficios, você
+          não precisa
+          passar por isso sozinho. Nossos serviços de recuperação de veículos são altamente especializados e contamos
+          com profissionais treinados para lidar com qualquer situação. Depois de fazer o boletim de ocorrência, fale
+          com a UP. Ter a nossa proteção é um alívio na hora do aperto!</p>
+        <ol>
+          <li>Faça um boletim de ocorrência</li>
+          <li>Entre em contato com a UP</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal-bg modal-bg-2">
+    <div class="container">
+      <div class="modal modal-2">
+        <header>
+          <h3>Colisão</h3>
+          <span class="close">
+            <img src="assets/svg/close.svg" alt="">
+          </span>
+        </header>
+        <p>Ter um acidente é uma situação estressante e preocupante, mas com a UP Clube de Benefícios você pode ficar tranquilo em relação aos custos. Em caso de perda total do veículo, nossa cobertura garante o pagamento de 100% da Tabela FIPE. Faça parte da nossa comunidade e proteja seu patrimônio com a UP!</p>
+        <ul style="list-style: disc;">
+          <li>Registro do boletim de ocorrência</li>
+          <li>Acionamento de guincho para remoção do veículo</li>
+          <li>Serviços de reboque para oficinas ou concessionárias;</li>
+          <li>Troca de pneus e reparos emergenciais no local;</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal-bg modal-bg-3">
+    <div class="container">
+      <div class="modal modal-3">
+        <header>
+          <h3>Perda total</h3>
+          <span class="close">
+            <img src="assets/svg/close.svg" alt="">
+          </span>
+        </header>
+        <p>A perda total de um veículo pode ser um momento muito difícil e estressante para qualquer motorista, mas com
+          a UP Clube de Benefícios, você pode ficar tranquilo sabendo que terá todo o suporte necessário nesse
+          momento.<br><br>
+
+          Quando um associado UP tem o seu veículo considerado perda total, a empresa oferece uma série de serviços para
+          auxiliar nessa situação, como: </p>
+        <ul style="list-style: disc;">
+          <li>Indicação de empresas especializadas na avaliação de perda total do veículo</li>
+          <li>Assessoria na negociação com seguradoras</li>
+          <li>Orientação na documentação necessária para o processo de indenização</li>
+          <li>Assistência para o transporte do veículo até a oficina ou local indicado</li>
+          <li>Auxílio na busca por um novo veículo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal-bg modal-bg-5">
+    <div class="container">
+      <div class="modal modal-5">
+        <header>
+          <h3>Fenômenos da natureza</h3>
+          <span class="close">
+            <img src="assets/svg/close.svg" alt="">
+          </span>
+        </header>
+        <p>Os fenômenos naturais são imprevisíveis e podem causar grandes transtornos, especialmente quando se trata de
+          veículos e estradas. Por isso, a UP Clube de Benefícios oferece um plano de proteção contra fenômenos
+          naturais, garantindo a segurança e tranquilidade de seus associados.<br><br>
+
+          Ao contratar o plano de proteção contra fenômenos naturais, você conta com serviços como:</p>
+        <ul style="list-style: disc;">
+          <li>Assistência em casos de enchentes, alagamentos e deslizamentos</li>
+          <li>Proteção contra danos causados por raios, tempestades e ventanias</li>
+          <li>Reboque em caso de veículo atolado ou preso em enchentes</li>
+          <li>Atendimento 24 horas em caso de emergências</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="modal-bg modal-bg-4">
+    <div class="container">
+      <div class="modal modal-4">
+        <header>
+          <h3>Proteção para terceiros</h3>
+          <span class="close">
+            <img src="assets/svg/close.svg" alt="">
+          </span>
+        </header>
+        <p>A proteção para terceiros é um serviço essencial para quem busca uma direção mais segura e responsável, e a
+          UP Clube de Benefícios oferece um plano completo para proteger você, seu veículo e outras pessoas envolvidas
+          em eventuais acidentes.<br><br>
+
+          Ao contratar o plano de proteção para terceiros da UP, você conta com serviços como:</p>
+        <ul style="list-style: disc;">
+          <li>Cobertura a danos materiais a terceiros</li>
+          <li>Atendimento 24 horas em caso de emergências e sinistros</li>
+          <li>Orientação na documentação necessária para o processo de indenização</li>
+          <li>Cobertura para danos causados a bens de terceiros;</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal-bg modal-bg-6">
+    <div class="container">
+      <div class="modal modal-6">
+        <header>
+          <h3>assistência 24 horas</h3>
+          <span class="close">
+            <img src="assets/svg/close.svg" alt="">
+          </span>
+        </header>
+        <p>Ao contratar a assistência 24 horas da UP, o associado tem acesso a serviços como socorro mecânico, reboque,
+          chaveiro, troca de pneu furado, auxílio na falta de gasolina, entre outros. Esses serviços podem ser acionados
+          a qualquer hora do dia, todos os dias da semana, em todo o território nacional.<br><br>
+
+          As vantagens de contar com uma assistência 24 horas são muitas. Além de oferecer uma proteção adicional para o
+          veículo, o serviço proporciona uma sensação de segurança e tranquilidade ao motorista, que sabe que pode
+          contar com uma equipe especializada em situações de emergência. Além disso, muitas empresas oferecem descontos
+          e benefícios exclusivos em estabelecimentos parceiros, o que pode gerar uma economia significativa no dia a
+          dia.<br><br>
+
+          Confira alguns dos serviços oferecidos pela assistência 24 horas da UP Clube de Benefícios: </p>
+        <ul style="list-style: disc;">
+          <li>Socorro mêcanico</li>
+          <li>Reboque</li>
+          <li>Chaveiro</li>
+          <li>Troca de pneu furado</li>
+          <li>Auxílio na falta de gasolina</li>
+          <li>Auxílio na pane elétrica ou mecânica</li>
+          <li>Guincho</li>
+          <li>Assistência jurídica e em casos de furto ou roubo do veículo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>

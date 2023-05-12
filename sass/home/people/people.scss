@@ -1,0 +1,129 @@
+@use "../../utils/mixin";
+
+.people-bg {
+  margin-bottom: 220px;
+  .people {
+    display: grid;
+    grid-template-columns: 5fr 4fr 3fr;
+    gap: 40px;
+
+    .people-block-2 {
+      svg {
+        margin-bottom: 40px;
+      }
+    }
+
+    .people-content {
+      align-self: center;
+
+      h3 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      h2 {
+        font-size: 4.8rem;
+        line-height: 1.2;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 2.4rem;
+        line-height: 1.5;
+        margin-bottom: 40px;
+      }
+    }
+
+    .people1 {
+      opacity: 0;
+      animation: people 10s ease 0s infinite;
+    }
+
+    .people2 {
+      opacity: 0;
+      animation: people 10s ease 5s infinite;
+    }
+
+    .people3 {
+      opacity: 0;
+      animation: people 10s ease 2s infinite;
+    }
+
+    .people4 {
+      opacity: 0;
+      animation: people 10s ease 7s infinite;
+    }
+
+    .people5 {
+      opacity: 0;
+      animation: people 10s ease 3s infinite;
+    }
+
+    .people6 {
+      opacity: 0;
+      animation: people 10s ease 8s infinite;
+    }
+
+    @keyframes people {
+      0% {
+        opacity: 0;
+      }
+
+      20%,
+      50% {
+        opacity: 1;
+      }
+
+      70%,
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+
+  @media (max-width:1057px) {
+    .people {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .people-block-1,
+    .people-block-2 {
+      text-align: center;
+    }
+
+    svg[width="260"][height="203"] {
+      display: none;
+    }
+
+    svg[width="260"][height="299"] {
+      display: none;
+    }
+  }
+
+  @include mixin.responsive("md") {
+    .people {
+      grid-template-columns: 1fr;
+    }
+
+    .people .people-content h2 {
+      font-size: 3.2rem;
+    }
+
+    .people .people-content p {
+      font-size: 1.8rem;
+    }
+  }
+
+  @include mixin.responsive('sm') {
+    margin-bottom: 120px;
+    .people .people-content h2{
+        font-size: 2.4rem;
+    }
+
+    .people .people-content h3 {
+      font-size: 2rem;
+    }
+  }
+}

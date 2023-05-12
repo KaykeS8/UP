@@ -1,0 +1,54 @@
+@use "../utils/variables";
+@use "../utils/mixin";
+
+.btn-small-primary {
+  background-color: variables.$primary;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  transition: all .3s;
+
+  &:hover {
+    background-color: #DD590E;
+  }
+}
+
+.btn-small-secondary {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid variables.$primary;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  transition: all .3s;
+
+  &:hover {
+    background-color: variables.$primary;
+    color: variables.$gray-100;
+  }
+}
+
+.btn-larger,
+#pwrcrmform button[type="submit"].btn-larger.gray-100 {
+  background-color: variables.$primary;
+  padding: 8px 60px;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: 'Poppins';
+  text-transform: uppercase;
+  transition: all .3s;
+
+  &:hover {
+    background-color: #DD590E;
+  }
+
+  @include mixin.responsive('xsm') {
+    padding: 6px 40px;
+  }
+  
+}

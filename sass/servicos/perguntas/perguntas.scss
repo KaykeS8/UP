@@ -1,0 +1,76 @@
+@use "../../utils/variables";
+@use "../../utils/mixin";
+
+.perguntas-bg {
+  margin-bottom: 220px;
+
+  .perguntas {
+    h2 {
+      font-size: 4.8rem;
+      margin-bottom: 60px;
+    }
+
+    dl>div {
+      padding: 20px;
+      border-radius: 4px;
+    }
+
+    div {
+      background-color: variables.$gray-200;
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 1.8rem;
+      font-weight: 500;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 6px;
+        background-image: url('../../../assets/svg/abrir.svg');
+        transition: .3s;
+      }
+
+      &:hover::after,
+      &[aria-expanded="true"]::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    dd {
+      display: none;
+    }
+
+    dd.ativa {
+      display: block;
+      margin-top: 12px;
+      color: variables.$gray-600;
+      line-height: 1.5;
+      font-size: 1.6rem;
+    }
+  }
+
+  @include mixin.responsive('md') {
+    .perguntas h2 {
+      font-size: 3.2rem;
+    }
+  }
+
+  @include mixin.responsive("sm") {
+    margin-bottom: 120px;
+
+    .perguntas h2 {
+      font-size: 2.4rem;
+    }
+  }
+}

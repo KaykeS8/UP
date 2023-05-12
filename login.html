@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="UP Clube de Benefícios - Associação de Proteção Veicular em Minas Gerais. Conte com a proteção da UP para garantir a segurança e tranquilidade ao dirigir. Faça seu login agora e fique por dentro das novidades.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="shortcut icon" href="./assets/favicon.ico">
+  <link rel="stylesheet" href="style/style.css">
+  <title>UP clube de benefício - Login</title>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header-bg">
+    <div class="header container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="logo" width="60" height="60">
+      </a>
+
+      <nav class="header-nav" aria-label="primaria">
+        <button aria-label="Abrir menu" id="btn-mobile" aria-controls="menu" aria-haspopup="true"
+          aria-expanded="false">Menu
+          <span id="hamburguer"></span>
+        </button>
+        <ul role="menu" id="menu" class="gray-700 list-nav">
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="login.html" class="link-mobile">Login</a></li>
+          <li><a href="cotacao.html" class="link-mobile">Cotação</a></li>
+        </ul>
+        <div class="header-buttons">
+          <a href="cotacao.html" class="btn-small-primary gray-100">cotação</a>
+          <a href="login.html" class="btn-small-secondary gray-900">login</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="login-bg">
+    <form class="login center-column" action="https://europa.hinova.com.br/sga/area/4.1/login.action.php" method="post">
+      <h2 class="title gray-800">faça login para entrar na área de associado</h2>
+      <div>
+        <label for="dfsCpf">CPF</label>
+        <input class="input-text" type="text" name="dfsCpf" id="dfsCpf" required="">
+      </div>
+      <div class="login-senha">
+        <label for="dfsSenha">Senha</label>
+        <input class="input-text" type="password" name="dfsSenha" id="dfsSenha" placeholder="senha" required="">
+        <img src="assets/svg/visivil-block.svg" class="pass-icon" alt="">
+      </div>
+      <input type="hidden" name="dfsChave" id="dfsChave"
+        value="40a2c024c11e9a056bba07c4f7ab7fdcd7400be3857a80a5715cc890365d161da31b9e4fc21b33a9050706bc433c6c72d3ff6515b8043f7704f97b2d9e645279">
+      <button class="btn-larger gray-100" type="submit" name="pbEntrar" value="Entrar">Entrar</button>
+      <a href="https://europa.hinova.com.br/sga/area/4.1/lembrarSenha.php?chave=182e6cca71ffa2293c2204224013de050398d45b9a12fd9f1abb119daceac2965bfbc269ca22359bafb9b7e4b50ef8151f214cdb5b2272738c9b2459f0c0daab"
+        target="_blank">Lembrar Senha</a>
+    </form>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-bg">
+    <div class="footer container">
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="assets/logo.png" width="60" height="60" alt="logo up clube de beneficios">
+        </a>
+      </div>
+      <div class="footer-informacoes">
+        <h3 class="title gray-200">Informações</h3>
+        <ul class="footer-informacoes-list gray-300">
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="cotacao.html">Cotação</a></li>
+        </ul>
+      </div>
+      <div class="footer-funcionamento">
+        <h3 class="title gray-200">Funcionamento</h3>
+        <ul class="footer-funcionamento-list gray-300">
+          <li data-semana="1,2,3,4" data-horario="8,18">seg à qui das 8 às 18</li>
+          <li data-semana="1,2,3,4,5" data-horario="8,17">seg à sex das 8 às 17</li>
+        </ul>
+      </div>
+      <div class="footer-redes">
+        <h3 class="title gray-200">Redes Sociais</h3>
+        <div class="footer-redes-image">
+          <a href="https://www.instagram.com/upclubedebeneficios/" target="_blank">
+            <img src="assets/svg/instagram.svg" width="26" height="26" alt="logo do instagram">
+          </a>
+          <a href="https://www.facebook.com/UpClubeDeBeneficios/?locale=pt_BR" target="_blank">
+            <img src="assets/svg/facebook.svg" width="24" height="24" alt="logo do facebook">
+          </a>
+          <a href="https://wa.me/30468900" target="_blank">
+            <img src="assets/svg/whatsapp.svg" width="24" height="25" alt="logo do whatsapp">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="separator container">
+    </div>
+
+    <div class="footer-info container">
+      <div class="footer-info-copy">
+        <span class="gray-100">&copy; 2023 Up clube de benefícios</span>
+        <p class="gray-300">A up clube de benefícios é uma empresa de associação automotiva, que atua pelo príncipio da
+          livre filiação, onde todos são iguais em direitos e deveres.</p>
+      </div>
+      <div class="footer-info-dev gray-100">
+        Desenvolvido por: <a href="https://br.linkedin.com/in/kayke-simao-592316226?trk=public_post_feed-actor-image"
+          target="_blank">Kayke simao</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
