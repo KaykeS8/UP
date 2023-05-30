@@ -1,4 +1,3 @@
-
 // MENU MOBILE
 const btnMobile = document.querySelector("#btn-mobile");
 function toggleMenu(event) {
@@ -7,10 +6,12 @@ function toggleMenu(event) {
   }
   const listNav = document.querySelector('.list-nav')
   const headerNav = document.querySelector('.header-nav')
-  listNav.classList.toggle("active")
-  headerNav.classList.toggle("active")
+  if (listNav && headerNav) {
+    listNav.classList.toggle("active")
+    headerNav.classList.toggle("active")
+  }
 
-  const active = listNav.classList.contains("active")
+  const active = listNav?.classList.contains("active")
 
   event.currentTarget.setAttribute("aria-expanded", active)
   if (active) {
@@ -20,8 +21,11 @@ function toggleMenu(event) {
   }
 }
 
-btnMobile.addEventListener("click", toggleMenu)
-btnMobile.addEventListener("touchstart", toggleMenu)
+
+if (btnMobile) {
+  btnMobile.addEventListener("click", toggleMenu)
+  btnMobile.addEventListener("touchstart", toggleMenu)
+}
 
 
 // FUNCIONAMENTO
@@ -52,13 +56,13 @@ const horarioAbertoOne = (horarioAgora >= horarioSemanaOne[0] && horarioAgora < 
 const horarioAbertoTwo = (horarioAgora >= horarioSemanaTwo[0] && horarioAgora < horarioSemanaTwo[1])
 
 
-if(semanaAbertaOne && horarioAbertoOne) {
+if (semanaAbertaOne && horarioAbertoOne) {
   funcionamentoOne.classList.add('aberto')
 } else {
   funcionamentoOne.classList.add('fechado')
 }
 
-if(semanaAbertaTwo && horarioAbertoTwo) {
+if (semanaAbertaTwo && horarioAbertoTwo) {
   funcionamentoTwo.classList.add("aberto")
 } else {
   funcionamentoTwo.classList.add('fechado')
@@ -76,7 +80,7 @@ perguntas.forEach(btn => {
     const controls = perguntas.getAttribute("aria-controls")
     const ddElement = document.querySelector('#' + controls)
     ddElement.classList.toggle("ativa")
-    if(ddElement.classList.contains('ativa')) {
+    if (ddElement.classList.contains('ativa')) {
       perguntas.ariaExpanded = true
     } else {
       perguntas.ariaExpanded = false
@@ -89,10 +93,10 @@ perguntas.forEach(btn => {
 const passIcon = document.querySelector('.pass-icon');
 const password = document.querySelector('.login-senha input')
 
-if(passIcon) {
+if (passIcon && password) {
   passIcon.addEventListener('click', () => {
     passIcon.classList.toggle("visivel")
-    if(passIcon.classList.contains('visivel')) {
+    if (passIcon.classList.contains('visivel')) {
       passIcon.src = 'assets/svg/visivil.svg'
       password.type = 'text';
     } else {
@@ -102,24 +106,24 @@ if(passIcon) {
   })
 }
 
-    // MODAL DE SERVIÇOS
-    for (let i = 1; i <= 6; i++) {
-      const clique = document.querySelectorAll(`.clique-${i}`);
-      const modalBg = document.querySelector('.modal-bg-' + i)
-      const modal = document.querySelector('.modal-' + i);
-      const close = document.querySelectorAll(".close")
+// MODAL DE SERVIÇOS
+for (let i = 1; i <= 6; i++) {
+  const clique = document.querySelectorAll(`.clique-${i}`);
+  const modalBg = document.querySelector('.modal-bg-' + i)
+  const modal = document.querySelector('.modal-' + i);
+  const close = document.querySelectorAll(".close")
 
-      clique.forEach(link => {
-        link.addEventListener('click', () => {
+  clique.forEach(link => {
+    link.addEventListener('click', () => {
 
-          modalBg.classList.add("active")
-          modal.classList.add('active')
-        })
-      })
-      close.forEach(close => {
-        close.addEventListener("click", () => {
-          modal.classList.remove("active")
-          modalBg.classList.remove('active')
-        })
-      })
-    }
+      modalBg.classList.add("active")
+      modal.classList.add('active')
+    })
+  })
+  close.forEach(close => {
+    close.addEventListener("click", () => {
+      modal.classList.remove("active")
+      modalBg.classList.remove('active')
+    })
+  })
+}
