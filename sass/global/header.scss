@@ -24,7 +24,7 @@
     align-items: center;
     gap: 40px;
 
-  
+
     .list-nav {
       display: flex;
       font-family: 'Poppins';
@@ -43,6 +43,12 @@
       a:hover::after {
         color: variables.$gray-900;
         width: 100%;
+      }
+
+      a.active::after {
+        content: "";
+        width: 100%;
+        background-color: variables.$primary;
       }
     }
 
@@ -94,9 +100,11 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     gap: 0;
     z-index: 1000;
+
     li {
       width: 100%;
       cursor: pointer;
+
       &:hover {
         background-color: rgba(0, 0, 0, 0.1);
       }
@@ -133,7 +141,8 @@
     border-top: 2px solid variables.$primary;
     width: 20px;
 
-    &::after,&::before {
+    &::after,
+    &::before {
       content: "";
       display: block;
       margin-top: 4px;
@@ -145,8 +154,9 @@
     }
   }
 
-  .header-nav.active #hamburguer{
+  .header-nav.active #hamburguer {
     border-top-color: transparent;
+
     &::after {
       transform: rotate(135deg);
       top: -6px;
@@ -156,5 +166,5 @@
       transform: rotate(-135deg);
     }
   }
-  
+
 }
