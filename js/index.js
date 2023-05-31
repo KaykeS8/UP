@@ -127,3 +127,19 @@ for (let i = 1; i <= 6; i++) {
     })
   })
 }
+
+
+// link active menu
+
+const links = document.querySelectorAll(".list-nav a")
+
+function ativarLink(link) {
+  const url = document.location.href
+  const href = link.href
+
+  if (url.includes(href)) {
+    link.classList.add('active')
+  }
+}
+
+links.forEach(ativarLink)
